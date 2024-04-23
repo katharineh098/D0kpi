@@ -1,0 +1,601 @@
+Warning in <TInterpreter::ReadRootmapFile>: class  PndProcess found in libProcessTask.so  is already in libEmcMC.so 
+Warning in <TInterpreter::ReadRootmapFile>: class  PndProcessTask found in libProcessTask.so  is already in libEmcMC.so 
+   ------------------------------------------------------------------
+  | Welcome to ROOT 6.26/02                        https://root.cern |
+  | (c) 1995-2021, The ROOT Team; conception: R. Brun, F. Rademakers |
+  | Built for linuxx8664gcc on Aug 23 2022, 09:25:00                 |
+  | From tags/v6-26-02@v6-26-02                                      |
+  | With c++ (Ubuntu 11.2.0-19ubuntu1) 11.2.0                        |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'       |
+   ------------------------------------------------------------------
+
+
+Processing tut_ana.C...
+[INFO] PndSensorNameContFact::PndSensorNameContFact()
+[INFO] PndSensorNameContFact::setAllContainers(): Added PndSensorNamePar, Match between GeoManager path and SensorId with context: TestDefaultContext
+[INFO] The input consists out of the following trees and files: 
+[INFO]  - pndsim
+[INFO]     - signal_pid.root
+[INFO] FairRootFileSink initialized.
+[INFO]  - pnd_0
+[INFO]     - out_dummy.root
+[INFO] Parameter and input file are available, Assure that basic info is there for the run!
+[INFO] ---FairRootManager::SpecifyRunId --- 
+[INFO] --- Initialize with RunId  --- 1713296550
+
+************************************************************* 
+     initialisation for run id 1713296550
+************************************************************* 
+-I- FairRunTimeDB::InitContainer() FairGeoParSet
+Info in <TGeoManager::CloseGeometry>: Geometry loaded from file...
+Info in <TGeoManager::SetTopVolume>: Top volume is cave. Master volume is cave
+Info in <TGeoNavigator::BuildCache>: --- Maximum geometry depth set to 100
+Info in <TGeoManager::Voxelize>: Voxelizing...
+Info in <TGeoManager::CountLevels>: max level = 12, max placements = 4550
+Info in <TGeoManager::CloseGeometry>: 2029436 nodes/ 5737 volume UID's in FAIR geometry
+Info in <TGeoManager::CloseGeometry>: ----------------modeler ready----------------
+Container FairGeoParSet initialized from ROOT file.
+-I- FairRunTimeDB::InitContainer() FairBaseParSet
+[INFO] Info in (PndGeoHandling::Instance): Making a new instance using the framework.
+Warning in <TDatabasePDG::TDatabasePDG>: object already instantiated
+Container FairBaseParSet initialized from ROOT file.
+[INFO] PndSensorNameContFact::createContainer()
+[INFO] Created PndSensorNamePar - PndSensorNamePar - 
+
+************************************************************* 
+     initialisation for run id 1713296550
+************************************************************* 
+-I- FairRunTimeDB::InitContainer() FairGeoParSet
+-I- FairRunTimeDB::InitContainer() FairBaseParSet
+-I- FairRunTimeDB::InitContainer() PndSensorNamePar
+Container PndSensorNamePar initialized from ROOT file.
+PndFieldCreator::SetParm() 0x555567d11830
+
+************************************************************* 
+     initialisation for run id 1713296550
+************************************************************* 
+-I- FairRunTimeDB::InitContainer() FairGeoParSet
+-I- FairRunTimeDB::InitContainer() FairBaseParSet
+-I- FairRunTimeDB::InitContainer() PndSensorNamePar
+-I- FairRunTimeDB::InitContainer() PndMultiFieldPar
+Container PndMultiFieldPar initialized from ROOT file.
+OBJ: PndTransPar	PndTransPar	Trans. Field parameter container
+OBJ: PndDipole1Par	PndDipole1Par	Dipole Field parameter container
+OBJ: PndDipole2Par	PndDipole2Par	Dipole Field parameter container
+OBJ: PndSolenoid1Par	PndSolenoid1Par	Solenoid 1st region parameter container
+OBJ: PndSolenoid2Par	PndSolenoid2Par	Solenoid 2nd region parameter container
+OBJ: PndSolenoid3Par	PndSolenoid3Par	Solenoid 3rd region parameter container
+OBJ: PndSolenoid4Par	PndSolenoid4Par	Solenoid 4th region parameter container
+[INFO] PndFieldMap: Reading field map from ROOT file  /mnt/work/PandaRoot/PandaRoot/input/fieldmaps/TransMap.0890.root
+[INFO] PndFieldMap: Reading field map from ROOT file  /mnt/work/PandaRoot/PandaRoot/input/fieldmaps/DipoleMap1.0890.root
+[INFO] PndFieldMap: Reading field map from ROOT file  /mnt/work/PandaRoot/PandaRoot/input/fieldmaps/DipoleMap2.0890.root
+[INFO] PndFieldMap: Reading field map from ROOT file  /mnt/work/PandaRoot/PandaRoot/input/fieldmaps/SolenoidMap1.root
+[INFO] PndFieldMap: Reading field map from ROOT file  /mnt/work/PandaRoot/PandaRoot/input/fieldmaps/SolenoidMap2.root
+[INFO] PndFieldMap: Reading field map from ROOT file  /mnt/work/PandaRoot/PandaRoot/input/fieldmaps/SolenoidMap3.root
+[INFO] PndFieldMap: Reading field map from ROOT file  /mnt/work/PandaRoot/PandaRoot/input/fieldmaps/SolenoidMap4.root
+[INFO] PndSensorNamePar::FillMap() - There are 2809 entries.
+[INFO] PndSensorNamePar::FillMap() done
+Warning in <TTree::Bronch>: FairEventHeader cannot be split, resetting splitlevel to 0
+[INFO] Object PidNeutralCand describing the branch in the folder structure was found
+[INFO] Object PidChargedCandElectron describing the branch in the folder structure was found
+  ####################  read PidChargedCand with special tracking hypothesis: PidChargedCandElectron  pointer 0x55555d3393e0
+[INFO] Object BremCorrected4MomElectron describing the branch in the folder structure was found
+[INFO] Object PidAlgoIdealChargedElectron describing the branch in the folder structure was found
+[INFO]  Branch: Electron not found in Tree.
+[INFO]  Branch: SttMvdGemGenTrackElectron not found in Tree.
+[INFO]  Branch: BarrelGenTrackElectron not found in Tree.
+[INFO]  Branch: SttMvdGenTrackElectron not found in Tree.
+[WARN]  PndAnalysis::Init(): No barrel track inpt array.
+[INFO]  Branch: Electron not found in Tree.
+[INFO]  Branch: FTSGenTrackElectron not found in Tree.
+[INFO]  Branch: FtsIdealGenTrackElectron not found in Tree.
+[INFO]  Branch: FTSTrkIdealElectron not found in Tree.
+[WARN]  PndAnalysis::Init(): No forward track inpt array.
+[INFO] Object PidChargedCandMuon describing the branch in the folder structure was found
+  ####################  read PidChargedCand with special tracking hypothesis: PidChargedCandMuon  pointer 0x55555d349a60
+[INFO]  Branch: BremCorrected4MomMuon not found in Tree.
+[INFO] Object PidAlgoIdealChargedMuon describing the branch in the folder structure was found
+[INFO]  Branch: Muon not found in Tree.
+[INFO]  Branch: SttMvdGemGenTrackMuon not found in Tree.
+[INFO]  Branch: BarrelGenTrackMuon not found in Tree.
+[INFO]  Branch: SttMvdGenTrackMuon not found in Tree.
+[WARN]  PndAnalysis::Init(): No barrel track inpt array.
+[INFO]  Branch: Muon not found in Tree.
+[INFO]  Branch: FTSGenTrackMuon not found in Tree.
+[INFO]  Branch: FtsIdealGenTrackMuon not found in Tree.
+[INFO]  Branch: FTSTrkIdealMuon not found in Tree.
+[WARN]  PndAnalysis::Init(): No forward track inpt array.
+[INFO] Object PidChargedCandPion describing the branch in the folder structure was found
+  ####################  read PidChargedCand with special tracking hypothesis: PidChargedCandPion  pointer 0x55555d34a890
+[INFO]  Branch: BremCorrected4MomPion not found in Tree.
+[INFO] Object PidAlgoIdealChargedPion describing the branch in the folder structure was found
+[INFO]  Branch: Pion not found in Tree.
+[INFO]  Branch: SttMvdGemGenTrackPion not found in Tree.
+[INFO]  Branch: BarrelGenTrackPion not found in Tree.
+[INFO]  Branch: SttMvdGenTrackPion not found in Tree.
+[WARN]  PndAnalysis::Init(): No barrel track inpt array.
+[INFO]  Branch: Pion not found in Tree.
+[INFO]  Branch: FTSGenTrackPion not found in Tree.
+[INFO]  Branch: FtsIdealGenTrackPion not found in Tree.
+[INFO]  Branch: FTSTrkIdealPion not found in Tree.
+[WARN]  PndAnalysis::Init(): No forward track inpt array.
+[INFO] Object PidChargedCandKaon describing the branch in the folder structure was found
+  ####################  read PidChargedCand with special tracking hypothesis: PidChargedCandKaon  pointer 0x55555d34b6c0
+[INFO]  Branch: BremCorrected4MomKaon not found in Tree.
+[INFO] Object PidAlgoIdealChargedKaon describing the branch in the folder structure was found
+[INFO]  Branch: Kaon not found in Tree.
+[INFO]  Branch: SttMvdGemGenTrackKaon not found in Tree.
+[INFO]  Branch: BarrelGenTrackKaon not found in Tree.
+[INFO]  Branch: SttMvdGenTrackKaon not found in Tree.
+[WARN]  PndAnalysis::Init(): No barrel track inpt array.
+[INFO]  Branch: Kaon not found in Tree.
+[INFO]  Branch: FTSGenTrackKaon not found in Tree.
+[INFO]  Branch: FtsIdealGenTrackKaon not found in Tree.
+[INFO]  Branch: FTSTrkIdealKaon not found in Tree.
+[WARN]  PndAnalysis::Init(): No forward track inpt array.
+[INFO] Object PidChargedCandProton describing the branch in the folder structure was found
+  ####################  read PidChargedCand with special tracking hypothesis: PidChargedCandProton  pointer 0x55555d34c4f0
+[INFO]  Branch: BremCorrected4MomProton not found in Tree.
+[INFO] Object PidAlgoIdealChargedProton describing the branch in the folder structure was found
+[INFO]  Branch: Proton not found in Tree.
+[INFO]  Branch: SttMvdGemGenTrackProton not found in Tree.
+[INFO]  Branch: BarrelGenTrackProton not found in Tree.
+[INFO]  Branch: SttMvdGenTrackProton not found in Tree.
+[WARN]  PndAnalysis::Init(): No barrel track inpt array.
+[INFO]  Branch: Proton not found in Tree.
+[INFO]  Branch: FTSGenTrackProton not found in Tree.
+[INFO]  Branch: FtsIdealGenTrackProton not found in Tree.
+[INFO]  Branch: FTSTrkIdealProton not found in Tree.
+[WARN]  PndAnalysis::Init(): No forward track inpt array.
+[INFO]  Branch: PidChargedCand not found in Tree.
+  ####################  No PidChargedCand with  tracking hypothesis
+[WARN]  PndAnalysis::Init(): No barrel track inpt array.
+[WARN]  PndAnalysis::Init(): No forward track inpt array.
+PndAnalysis::Init(): Default hypothesis is pions.
+[INFO] Object MCTrack describing the branch in the folder structure was found
+
+************************************************************* 
+     initialisation for run id 1713296550
+************************************************************* 
+-I- FairRunTimeDB::InitContainer() FairGeoParSet
+-I- FairRunTimeDB::InitContainer() FairBaseParSet
+-I- FairRunTimeDB::InitContainer() PndSensorNamePar
+-I- FairRunTimeDB::InitContainer() PndMultiFieldPar
+-I- FairRunTimeDB::InitContainer() ANAPidSelections
+ANAPidSelections initialized from Ascii file
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+[INFO] Object PidAlgoMdtHardCutsKaon describing the branch in the folder structure was found
+[INFO] Object PidAlgoMvdKaon describing the branch in the folder structure was found
+[INFO] Object PidAlgoSttKaon describing the branch in the folder structure was found
+[INFO] Object PidAlgoDrcKaon describing the branch in the folder structure was found
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 7.
+[INFO] Object PidAlgoMvdPion describing the branch in the folder structure was found
+[INFO] Object PidAlgoSttPion describing the branch in the folder structure was found
+[INFO] Object PidAlgoDrcPion describing the branch in the folder structure was found
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMdtHardCutsKaon' array (0x55555d34b990) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdKaon' array (0x55555d34b840) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttKaon' array (0x55555d34bdd0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcKaon' array (0x55555d34bb10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 3.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 4.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 5.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 6.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoMvdPion' array (0x55555d34aa10) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoSttPion' array (0x55555d34afa0) bounds, skip setting pid for candidate 7.
+Error in <PndAnaPidCombiner::Apply>: Index out of 'PidAlgoDrcPion' array (0x55555d34ace0) bounds, skip setting pid for candidate 7.
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=0 GeV/c
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=0 GeV/c
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=0 GeV/c
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+RhoCalculationTools::StateFromTrajectory(): Zero protection: pz=0 Gev/c     p=nan GeV/c
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+InternalParticle::initPar1(): InternalParticle: Trying new code!
+evt 100
+Info in <PndAnalysis::GetEvent()>: Maximum number of entries in the file chain reached: 100.
