@@ -1,5 +1,3 @@
-// Stephan is the best Git-Teacher
-// This line must stay in the code at all times!
 #include "PndTutAnaTask.h" 
 class RhoCandList;
 class RhoCandidate;
@@ -224,6 +222,21 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
   TH1F *hD0bartmp_phi = new TH1F("hD0bartmp_mass", "mass of D0bartmp", 200, -2, 2);
 
 
+  TH1F *hkp1_momentum = new TH1F("hkp1_momentum", "the momentum of kplus", 200, 0, 15);
+  TH1F *hkp1_costheta = new TH1F("hkp1_costheta", "the cos theta distribution of kplus", 200, -1.5, 1.5);
+  TH1F *hkp1_phi = new TH1F("hkp1_phi", "the phi distribution of kplus", 200, -3.5, 3.5);
+  TH1F *hpm1_momentum = new TH1F("hpm1_momentum", "the momentum of piminus", 200, 0, 15);
+  TH1F *hpm1_costheta = new TH1F("hpm1_costheta", "the cos theta distribution of piminus", 200, -1.5, 1.5);
+  TH1F *hpm1_phi = new TH1F("hpm1_phi", "the phi distribution of piminus", 200, -3.5, 3.5);
+
+  TH1F *hkm1_momentum = new TH1F("hkm1_momentum", "the momentum of kminus", 200, 0, 15);
+  TH1F *hkm1_costheta = new TH1F("hkm1_costheta", "the cos theta distribution of kminus", 200, -1.5, 1.5);
+  TH1F *hkm1_phi = new TH1F("hkm1_phi", "the phi distribution of kminus", 200, -3.5, 3.5);
+  TH1F *hpp1_momentum = new TH1F("hpp1_momentum", "the momentum of piplus", 200, 0, 15);
+  TH1F *hpp1_costheta = new TH1F("hpp1_costheta", "the cos theta distribution of piplus", 200, -1.5, 1.5);
+  TH1F *hpp1_phi = new TH1F("hpp1_phi", "the phi distribution of piplus", 200, -3.5, 3.5);
+
+
 
 
   //
@@ -262,6 +275,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
     //kplus loop
     for(j = 0; j < kplus.GetLength(); ++j){
       RhoCandidate *kplusMcTruth = kplus[j]->GetMcTruth();
+      hkp1_momentum->Fill(kplus[j]->P());
+      hkp1_costheta->Fill(kplus[j]->GetPosition().CosTheta());
+      hkp1_phi->Fill(kplus[j]->GetPosition().Phi());
       if(kplusMcTruth){
         hmkp_->Fill(kplus[j]->PdgCode());
         RhoCandidate *kplusMother = kplusMcTruth->TheMother();
@@ -274,6 +290,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
     //kminus loop
     for(j = 0; j < kminus.GetLength(); ++j){
       RhoCandidate *kminusMcTruth = kminus[j]->GetMcTruth();
+      hkm1_momentum->Fill(kminus[j]->P());
+      hkm1_costheta->Fill(kminus[j]->GetPosition().CosTheta());
+      hkm1_phi->Fill(kminus[j]->GetPosition().Phi());
       if(kminusMcTruth){
         hmkm_->Fill(kminus[j]->PdgCode());
         RhoCandidate *kminusMother = kminusMcTruth->TheMother();
@@ -288,6 +307,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
       RhoCandidate *piplusMcTruth = piplus[j]->GetMcTruth();
       if(piplusMcTruth){
         hmpp_->Fill(piplus[j]->PdgCode());
+        hpp1_momentum->Fill(piplus[j]->P());
+        hpp1_costheta->Fill(piplus[j]->GetPosition().CosTheta());
+        hpp1_phi->Fill(piplus[j]->GetPosition().Phi());
         RhoCandidate *piplusMother = piplusMcTruth->TheMother();
         if(piplusMother){
           hmpp->Fill(piplusMother->PdgCode());
@@ -300,6 +322,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
       RhoCandidate *piminusMcTruth = piminus[j]->GetMcTruth();
       if(piminusMcTruth){
         hmpm_->Fill(piminus[j]->PdgCode());
+        hpm1_momentum->Fill(piminus[j]->P());
+        hpm1_costheta->Fill(piminus[j]->GetPosition().CosTheta());
+        hpm1_phi->Fill(piminus[j]->GetPosition().Phi());
         RhoCandidate *piminusMother = piminusMcTruth->TheMother();
         if(piminusMother){
            hmpm->Fill(piminusMother->PdgCode());
@@ -508,10 +533,17 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
     // ***
 
     // *** and again with PidAlgoMvd;PidAlgoStt;PidAlgoDrc and loose selection
-    theAnalysis->FillList(kplus_lo, "KaonLoosePlus", "PidAlgoMdtHardCuts;PidAlgoMvd;PidAlgoStt;PidAlgoDrc");
+    /*
+    theAnalysis->FillList(kplus_lo, "KaonaLoosePlus", "PidAlgoMdtHardCuts;PidAlgoMvd;PidAlgoStt;PidAlgoDrc");
     theAnalysis->FillList(kminus_lo, "KaonLooseMinus", "PidAlgoMdtHardCuts;PidAlgoMvd;PidAlgoStt;PidAlgoDrc");
     theAnalysis->FillList(piplus_lo, "PionLoosePlus", "PidAlgoMvd;PidAlgoStt;PidAlgoDrc");
     theAnalysis->FillList(piminus_lo, "PionLooseMinus", "PidAlgoMvd;PidAlgoStt;PidAlgoDrc");
+    */
+
+    theAnalysis->FillList(kplus_lo, "KaonBestPlus");
+    theAnalysis->FillList(kminus_lo, "KaonBestMinus");
+    theAnalysis->FillList(piplus_lo, "PionBestPlus");
+    theAnalysis->FillList(piminus_lo, "PionBestMinus");
    
     //kplus_lo loop, pdg code of the partice, pdg code of the mother particle of kplus 
     for(j = 0; j < kplus_lo.GetLength(); ++j){
@@ -623,7 +655,7 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
   RhoCandidate *piplusMcTruth = pip->GetMcTruth();
   RhoCandidate *piminusMcTruth = pim->GetMcTruth();
  
- if(kplusMcTruth && kminusMCTruth && piplusMcTruth && piminusMcTruth)
+ if(kplusMcTruth && kminusMCTruth && piplusMcTruth && piminusMcTruth){
   if(kaon_plus_id == kplusMcTruth->PdgCode()){
           if(kaon_minus_id == kminusMCTruth->PdgCode()){
                   if(pion_plus_id == piplusMcTruth->PdgCode()){
@@ -674,13 +706,14 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
                                                   hD0bar_p_resolution->Fill(D0bar_momentum_truth_matched - D0bar_momentum_MC); 
                                                   hD0bar_cos_resolution->Fill(D0bar_cos_truth_matched - D0bar_cos_MC);
                                                   hD0bar_phi_resolution->Fill(D0bar_phi_truth_matched - D0bar_phi_MC);
+                                                }
                                           }
                                   } 
                           }
                   }
           }
   }
-}
+    }
 
 
 
@@ -914,6 +947,29 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
   hpm_p_resolution->Write();
   hpm_cos_resolution->Write();
   hpm_phi_resolution->Write();
+
+  hD0tmp_mass->Write();
+  hD0tmp_p->Write();
+  hD0tmp_cos->Write();
+  hD0tmp_phi->Write();
+  hD0bartmp_mass->Write();
+  hD0bartmp_p->Write();
+  hD0bartmp_cos->Write();
+  hD0bartmp_phi->Write();
+
+  hkp1_momentum->Write();
+  hkp1_costheta->Write();
+  hkp1_phi->Write();
+  hpm1_momentum->Write();
+  hpm1_costheta->Write();
+  hpm1_phi->Write();
+
+  hpp1_momentum->Write();
+  hpp1_costheta->Write();
+  hpp1_phi->Write();
+  hkm1_momentum->Write();
+  hkm1_costheta->Write();
+  hkm1_phi->Write();
 
   out->Save();
 
