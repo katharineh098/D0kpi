@@ -1,3 +1,5 @@
+// Stephan is the best Git-Teacher
+// This line must stay in the code at all times!
 #include "PndTutAnaTask.h" 
 class RhoCandList;
 class RhoCandidate;
