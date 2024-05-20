@@ -268,21 +268,21 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
                 piminus_lo,
                 D0_lo,
                 D0bar_lo,
-                psi2s_lo,
+                pbarpSystem_lo,
                 kplus_ti,
                 kminus_ti,
                 piplus_ti,
                 piminus_ti,
                 D0_ti,
                 D0bar_ti,
-                psi2s_ti,
+                pbarpSystem_ti,
                 kplus,
                 kminus,
                 piplus,
                 piminus,
                 D0,
                 D0bar,
-                psi2s;
+                pbarpSystem;
     while (theAnalysis->GetEvent() && i++ < nevts)
     {
 
@@ -347,26 +347,26 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
         D0bar.Combine(kminus, piplus, pdb->GetParticle("D0bar"));
 
         // *** combinatorics for psi(2S) -> D0 D0bar; set type to pbarpSystem (since it was generated like this)
-        psi2s.Combine(D0, D0bar, pdb->GetParticle("pbarpSystem"));
+        pbarpSystem.Combine(D0, D0bar, pdb->GetParticle("pbarpSystem"));
 
         // ***
         // *** do the TRUTH MATCH for psi(2S)
         // ***
-        for (j = 0; j < psi2s.GetLength(); ++j)
+        for (j = 0; j < pbarpSystem.GetLength(); ++j)
         {
-            hpsim_all->Fill(psi2s[j]->M());
+            hpsim_all->Fill(pbarpSystem[j]->M());
 
-            if (theAnalysis->McTruthMatch(psi2s[j]))
+            if (theAnalysis->McTruthMatch(pbarpSystem[j]))
             {
-                hpsim_ftm->Fill(psi2s[j]->M());
-                hpsim_diff->Fill(psi2s[j]->GetMcTruth()->M() - psi2s[j]->M());
-                RhoCandidate *trueD0 = psi2s[j]->Daughter(0)->GetMcTruth();
-                RhoCandidate *trueD0bar = psi2s[j]->Daughter(1)->GetMcTruth();
-                double mass_diff_D0 = trueD0->M() - psi2s[j]->Daughter(0)->M();
-                double mass_diff_D0bar = trueD0bar->M() - psi2s[j]->Daughter(1)->M();
+                hpsim_ftm->Fill(pbarpSystem[j]->M());
+                hpsim_diff->Fill(pbarpSystem[j]->GetMcTruth()->M() - pbarpSystem[j]->M());
+                RhoCandidate *trueD0 = pbarpSystem[j]->Daughter(0)->GetMcTruth();
+                RhoCandidate *trueD0bar = pbarpSystem[j]->Daughter(1)->GetMcTruth();
+                double mass_diff_D0 = trueD0->M() - pbarpSystem[j]->Daughter(0)->M();
+                double mass_diff_D0bar = trueD0bar->M() - pbarpSystem[j]->Daughter(1)->M();
             }
             else
-                hpsim_nm->Fill(psi2s[j]->M());
+                hpsim_nm->Fill(pbarpSystem[j]->M());
         }
 
         // ***
@@ -459,9 +459,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
             // ***
             // *** do 4C FIT (initial psi(2S) system)
             // ***
-            for (j = 0; j < psi2s.GetLength(); ++j)
+            for (j = 0; j < pbarpSystem.GetLength(); ++j)
             {
-                RhoKinFitter fitter(psi2s[j]); // instantiate the kin fitter in psi(2S)
+                RhoKinFitter fitter(pbarpSystem[j]); // instantiate the kin fitter in psi(2S)
                 fitter.Add4MomConstraint(ini); // set 4 constraint
                 fitter.Fit();                  // do fit
 
@@ -472,8 +472,8 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
 
                 if (prob_4c > 0.01) // when good enough, fill some histo
                 {
-                    RhoCandidate *D0fit = psi2s[j]->Daughter(0)->GetFit(); // get fitted J/psi
-                    RhoCandidate *D0barfit = psi2s[j]->Daughter(1)->GetFit();
+                    RhoCandidate *D0fit = pbarpSystem[j]->Daughter(0)->GetFit(); // get fitted J/psi
+                    RhoCandidate *D0barfit = pbarpSystem[j]->Daughter(1)->GetFit();
 
                     hD0m_4cf->Fill(D0fit->M());
                     hD0barm_4cf->Fill(D0barfit->M());
@@ -483,10 +483,10 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
             // ***
             // *** do DECAY TREE FIT (initial psi(2S) system)
             // ***
-            for (j = 0; j < psi2s.GetLength(); ++j)
+            for (j = 0; j < pbarpSystem.GetLength(); ++j)
             {
                 // *** decay tree fitter
-                RhoDecayTreeFitter fittree(psi2s[j], ini);
+                RhoDecayTreeFitter fittree(pbarpSystem[j], ini);
                 fittree.Fit();
 
                 double chi2_m = fittree.GetChi2(); // get chi2 of fit
@@ -496,8 +496,8 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
 
                 if (prob_m > 0.00001) // when good enough, fill some histo
                 {
-                    RhoCandidate *D0fit = psi2s[j]->Daughter(0)->GetFit(); // access the fitted cand
-                    RhoCandidate *D0barfit = psi2s[j]->Daughter(1)->GetFit();
+                    RhoCandidate *D0fit = pbarpSystem[j]->Daughter(0)->GetFit(); // access the fitted cand
+                    RhoCandidate *D0barfit = pbarpSystem[j]->Daughter(1)->GetFit();
                     hD0m_dc->Fill(D0fit->M());
                     hD0barm_dc->Fill(D0barfit->M());
                 }
@@ -546,9 +546,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
             hD0barm_trpid->Fill(D0bar[j]->M());
         D0bar.Select(D0MassSel);
 
-        psi2s.Combine(D0, D0bar);
-        for (j = 0; j < psi2s.GetLength(); ++j)
-            hpsim_trpid->Fill(psi2s[j]->M());
+        pbarpSystem.Combine(D0, D0bar);
+        for (j = 0; j < pbarpSystem.GetLength(); ++j)
+            hpsim_trpid->Fill(pbarpSystem[j]->M());
 
         // ***
         // *** LOOSE PID combinatorics
@@ -669,13 +669,13 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
         RhoCandidate *pip;
         RhoCandidate *km;
         // Combining D0_bar and D0 to Interaction-Point
-        psi2s_lo.Combine(D0_lo, D0bar_lo);
-        for (j = 0; j < psi2s_lo.GetLength(); ++j)
+        pbarpSystem_lo.Combine(D0_lo, D0bar_lo);
+        for (j = 0; j < pbarpSystem_lo.GetLength(); ++j)
         {
-            hpsim_lpid->Fill(psi2s_lo[j]->M());
+            hpsim_lpid->Fill(pbarpSystem_lo[j]->M());
             // get daughtes
-            D0_tmp = psi2s_lo[j]->Daughter(0);
-            D0bar_tmp = psi2s_lo[j]->Daughter(1);
+            D0_tmp = pbarpSystem_lo[j]->Daughter(0);
+            D0bar_tmp = pbarpSystem_lo[j]->Daughter(1);
 
             kp = D0_tmp->Daughter(0);
             pim = D0_tmp->Daughter(1);
@@ -843,9 +843,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
             hD0barm_tpid->Fill(D0bar_ti[j]->M());
         D0bar_ti.Select(D0MassSel);
 
-        psi2s_ti.Combine(D0_ti, D0bar_ti);
-        for (j = 0; j < psi2s_ti.GetLength(); ++j)
-            hpsim_tpid->Fill(psi2s_ti[j]->M());
+        pbarpSystem_ti.Combine(D0_ti, D0bar_ti);
+        for (j = 0; j < pbarpSystem_ti.GetLength(); ++j)
+            hpsim_tpid->Fill(pbarpSystem_ti[j]->M());
 
         // ***
         // *** P>0.4 PID combinatorics
@@ -867,9 +867,9 @@ void tut_ana(int nevts = 0, TString prefix = "D0_kpi")
             hD0barm_pid04->Fill(D0bar[j]->M());
         D0bar.Select(D0MassSel);
 
-        psi2s.Combine(D0, D0bar);
-        for (j = 0; j < psi2s.GetLength(); ++j)
-            hpsim_pid04->Fill(psi2s[j]->M());
+        pbarpSystem.Combine(D0, D0bar);
+        for (j = 0; j < pbarpSystem.GetLength(); ++j)
+            hpsim_pid04->Fill(pbarpSystem[j]->M());
     }
 
 // *** write out all the histos
